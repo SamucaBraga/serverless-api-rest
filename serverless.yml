@@ -1,0 +1,16 @@
+org: samuel23
+app: serverless-api-rest
+service: serverless-api-rest
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  function1:
+    handler: src/index.handler
+    events:
+      - http:
+          path: /
+          method: GET
